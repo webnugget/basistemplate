@@ -1,0 +1,5 @@
+plugin.tx_basistemplate.view {
+	templateRootPath = EXT:basistemplate/Resources/Private/Templates/
+	partialRootPath = EXT:basistemplate/Resources/Private/Partials/
+	layoutRootPath = EXT:basistemplate/Resources/Private/Layouts/
+}

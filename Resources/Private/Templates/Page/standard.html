@@ -1,0 +1,33 @@
+{namespace flux=Tx_Flux_ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Page" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+     
+  <f:section name="Configuration">
+    <flux:flexform id="standard" label="Standard Template" icon="{f:uri.resource(path: 'Icons/Page.gif')}">
+      <flux:flexform.grid>
+        <flux:flexform.grid.row>
+          <flux:flexform.grid.column colPos="0" name="Inhalt" />
+        </flux:flexform.grid.row>
+      </flux:flexform.grid>
+    </flux:flexform>
+  </f:section>
+
+
+  <f:section name="Main">
+    <div class="row">
+      <div class="large-12 columns panel">
+        <h1> Das ist eine Ueberschrift!</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns panel">
+        <v:page.content.render column="0" />
+      </div>
+    </div>
+  </f:section>
+</div>

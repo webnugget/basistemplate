@@ -1,0 +1,25 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Page" />
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+     
+<f:section name="SharedResources">
+  <v:asset.style content="stylesheets" path="EXT:basistemplate/Resources/Public/css/normalize.css" name="Stylesheets" group="css" />
+  <v:asset.style content="stylesheets" path="EXT:basistemplate/Resources/Public/css/foundation.min.css" name="Stylesheets" group="css" />
+
+
+  <v:asset.script name="modernizr" group="headerjs" path="EXT:basistemplate/Resources/Public/js/vendor/modernizr.js"  allowMoveToFooter="FALSE" />
+
+
+  <v:asset.script name="jquery" group="footerjs" path="EXT:basistemplate/Resources/Public/js/vendor/jquery.js"  />
+  <v:asset.script name="fastclick" group="footerjs" path="EXT:basistemplate/Resources/Public/js/vendor/fastclick.js"  />
+  <v:asset.script name="jquerycookie" group="footerjs" path="EXT:basistemplate/Resources/Public/js/vendor/jquery.cookie.js"  />
+  <v:asset.script name="placeholder" group="footerjs" path="EXT:basistemplate/Resources/Public/js/vendor/placeholder.js"  />
+  <v:asset.script name="foundationmin" group="footerjs" path="EXT:basistemplate/Resources/Public/js/foundation.min.js"  />
+  <v:asset.script name="foundationmin" group="footerjs" path="EXT:basistemplate/Resources/Public/js/foundation.min.js"  />
+  <v:asset.script name="foundationmin" group="footerjs">
+    $(document).foundation();
+  </v:asset.script>
+
+</f:section> 

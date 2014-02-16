@@ -1,0 +1,95 @@
+{namespace flux=Tx_Flux_ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Page" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+     
+  <f:section name="Configuration">
+    <flux:flexform id="sidebar" label="Sidebar Template" icon="{f:uri.resource(path: 'Icons/Page.gif')}">
+      <flux:flexform.grid>
+        <flux:flexform.grid.row>
+          <flux:flexform.grid.column colPos="0" name="Content" />
+          <flux:flexform.grid.column colPos="2" name="Sidebar" />
+        </flux:flexform.grid.row>
+        <flux:flexform.grid.row>
+          <flux:flexform.grid.column colPos="1" colspan="2" name="Footer" />
+        </flux:flexform.grid.row>
+      </flux:flexform.grid>
+    </flux:flexform>
+  </f:section>
+  
+  <f:section name="Main">
+    <!-- Nav Bar -->
+   
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="nav-bar right">
+          <ul class="button-group">
+            <li><a href="#" class="button">Standard</a></li>
+            <li><a href="#" class="button">Side</a></li>
+            <li><a href="#" class="button">Contentelemente</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>   
+    
+    <!-- End Nav -->
+    
+    <!--Header-->
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>TYPO3 mit fedext <br/> <small>Eine Alternative zu Templavoila</small></h1>
+        <hr />
+      </div>
+    </div>
+    <!--End Header-->
+
+   
+   
+    <!-- Main Page Content -->
+   
+    <div class="row">
+   
+      <!-- Main Content -->
+      <div class="large-9 columns" role="content">
+   
+      <v:page.content.render column="0" />
+   
+      </div>
+   
+      <!-- End Main Content -->
+      
+      <!-- Sidebar -->
+ 
+      <aside class="large-3 columns panel">
+   
+        <v:page.content.render column="2" />
+   
+      </aside>
+   
+      <!-- End Sidebar -->
+   
+      
+    </div>
+   
+    <!-- End Main Content and Sidebar -->
+   
+   
+    <!-- Footer -->
+   
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr />
+        <div class="row">
+          <div class="large-12 columns">
+            <v:page.content.render column="1" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </f:section>
+</div>
+        

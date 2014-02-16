@@ -11,22 +11,75 @@
     <flux:flexform id="standard" label="Standard Template" icon="{f:uri.resource(path: 'Icons/Page.gif')}">
       <flux:flexform.grid>
         <flux:flexform.grid.row>
-          <flux:flexform.grid.column colPos="0" name="Inhalt" />
+          <flux:flexform.grid.column colPos="0" name="Content" />
+        </flux:flexform.grid.row>
+        <flux:flexform.grid.row>
+          <flux:flexform.grid.column colPos="1" name="Footer" />
         </flux:flexform.grid.row>
       </flux:flexform.grid>
     </flux:flexform>
   </f:section>
   
   <f:section name="Main">
+    <!-- Nav Bar -->
+   
     <div class="row">
-      <div class="large-12 columns panel">
-        <h1> Das ist eine Ueberschrift!</h1>
+      <div class="large-12 columns">
+        <div class="nav-bar right">
+          <ul class="button-group">
+            <li><a href="#" class="button">Standard</a></li>
+            <li><a href="#" class="button">Side</a></li>
+            <li><a href="#" class="button">Contentelemente</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>   
+    
+    <!-- End Nav -->
+    
+    <!--Header-->
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>TYPO3 mit fedext <br/> <small>Eine Alternative zu Templavoila</small></h1>
+        <hr />
       </div>
     </div>
+    <!--End Header-->
+
+   
+   
+    <!-- Main Page Content -->
+   
     <div class="row">
-      <div class="large-12 columns panel">
-        <v:page.content.render column="0" />
+   
+      <!-- Main Content -->
+      <div class="large-12 columns" role="content">
+   
+      <v:page.content.render column="0" />
+   
       </div>
+   
+      <!-- End Main Content -->
+   
+   
+      
     </div>
+   
+    <!-- End Main Content and Sidebar -->
+   
+   
+    <!-- Footer -->
+   
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr />
+        <div class="row">
+          <div class="large-12 columns">
+            <v:page.content.render column="1" />
+          </div>
+        </div>
+      </div>
+    </footer>
   </f:section>
 </div>
+        
